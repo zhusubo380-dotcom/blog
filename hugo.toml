@@ -4,7 +4,7 @@
 # ============================================================
 
 # 网站根地址（部署到 Cloudflare 后由构建参数自动覆盖，通常无需修改）
-baseURL = "https://allen-blog-d3z.pages.dev"
+baseURL = "https://mumao.ccwu.cc"
 
 # 主题名称
 theme = "LoveIt"
