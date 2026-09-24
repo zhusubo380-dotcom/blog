@@ -2,7 +2,7 @@
 title: "你好，世界：博客开张了"
 date: 2026-09-24T11:00:00+08:00
 draft: false
-author: "博主"
+author: "Allen"
 description: "第一篇文章，用来测试 LoveIt 主题的基本显示效果。"
 categories: ["随笔"]
 tags: ["Hugo", "开始"]

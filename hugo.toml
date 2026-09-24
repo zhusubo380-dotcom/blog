@@ -10,7 +10,7 @@ baseURL = "https://example.com"
 theme = "LoveIt"
 
 # 网站标题
-title = "我的博客"
+title = "Allen的打怪日记"
 
 # 网站语言（简体中文）
 defaultContentLanguage = "zh-cn"
@@ -66,19 +66,19 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # 网站默认主题 ["auto", "light", "dark"]
   defaultTheme = "auto"
   # 公开的 Git 仓库地址（用于页面"查看源码"链接，可留空）
-  gitRepo = ""
+  gitRepo = "https://github.com/zhusubo380-dotcom/blog"
   # SRI 哈希算法，留空即不使用
   fingerprint = ""
   # 日期格式
   dateFormat = "2006-01-02"
   # 网站标题与描述（用于搜索结果、分享卡片等）
-  title = "我的博客"
-  description = "我的个人博客"
+  title = "Allen的打怪日记"
+  description = "Allen 的个人博客"
   images = []
 
   # 作者信息
   [params.author]
-    name = "博主"
+    name = "Allen"
     email = ""
     link = ""
 
@@ -88,7 +88,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     mobileMode = "auto"
     [params.header.title]
       logo = ""
-      name = "我的博客"
+      name = "Allen的打怪日记"
       pre = ""
       post = ""
       typeit = false
@@ -118,7 +118,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
   # 站点图标
   [params.app]
-    title = "我的博客"
+    title = "Allen的打怪日记"
     noFavicon = false
     svgFavicon = ""
     themeColor = "#ffffff"
@@ -154,7 +154,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
   # 社交链接（填写后才显示对应图标，例如 GitHub = "https://github.com/你的用户名"）
   [params.social]
-    GitHub = ""
+    GitHub = "https://github.com/zhusubo380-dotcom"
     Bilibili = ""
     Email = ""
     RSS = true
@@ -294,7 +294,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     [params.page.seo]
       images = []
       [params.page.seo.publisher]
-        name = "我的博客"
+        name = "Allen的打怪日记"
         logoUrl = ""
 
   # 打字机动画参数
