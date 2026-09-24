@@ -1,0 +1,410 @@
+# ============================================================
+# 我的博客 — Hugo 站点配置（主题：LoveIt v0.3.1）
+# 本文件基于 LoveIt 官方示例精简而来，可按需修改
+# ============================================================
+
+# 网站根地址（部署到 Cloudflare 后由构建参数自动覆盖，通常无需修改）
+baseURL = "https://example.com"
+
+# 主题名称
+theme = "LoveIt"
+
+# 网站标题
+title = "我的博客"
+
+# 网站语言（简体中文）
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+languageName = "简体中文"
+hasCJKLanguage = true
+
+# 版权描述（仅用于 SEO）
+copyright = ""
+
+# 生成 robots.txt（有利于搜索引擎收录）
+enableRobotsTXT = true
+# 是否用 Git 提交信息显示文章"最后修改时间"（仓库建立并产生提交后可改为 true）
+enableGitInfo = false
+# 启用 emoji 简写（如 :smile:）
+enableEmoji = true
+# 忽略部分远程资源错误
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+# ---------- 分页配置 ----------
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = "page"
+
+# ---------- 顶部菜单 ----------
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+  [[menu.main]]
+    weight = 4
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+
+# ============================================================
+# 主题参数
+# ============================================================
+[params]
+  # 网站默认主题 ["auto", "light", "dark"]
+  defaultTheme = "auto"
+  # 公开的 Git 仓库地址（用于页面"查看源码"链接，可留空）
+  gitRepo = ""
+  # SRI 哈希算法，留空即不使用
+  fingerprint = ""
+  # 日期格式
+  dateFormat = "2006-01-02"
+  # 网站标题与描述（用于搜索结果、分享卡片等）
+  title = "我的博客"
+  description = "我的个人博客"
+  images = []
+
+  # 作者信息
+  [params.author]
+    name = "博主"
+    email = ""
+    link = ""
+
+  # 头部导航
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "我的博客"
+      pre = ""
+      post = ""
+      typeit = false
+
+  # 页脚
+  [params.footer]
+    enable = true
+    custom = ""
+    hugo = true
+    copyright = true
+    author = true
+    since = 2026
+    icp = ""
+    license = ""
+
+  # "所有文章"列表页
+  [params.section]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+
+  # 标签 / 分类列表页
+  [params.list]
+    paginate = 20
+    dateFormat = "01-02"
+    rss = 10
+
+  # 站点图标
+  [params.app]
+    title = "我的博客"
+    noFavicon = false
+    svgFavicon = ""
+    themeColor = "#ffffff"
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+
+  # 站内搜索（lunr：本地全文搜索，无需第三方服务）
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = ""
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+
+  # 主页
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      gravatarEmail = ""
+      avatarURL = ""
+      title = ""
+      subtitle = "记录学习、工作与生活的点滴"
+      typeit = true
+      social = true
+      disclaimer = ""
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  # 社交链接（填写后才显示对应图标，例如 GitHub = "https://github.com/你的用户名"）
+  [params.social]
+    GitHub = ""
+    Bilibili = ""
+    Email = ""
+    RSS = true
+
+  # 文章页全局设置
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = false
+    lightgallery = false
+    ruby = true
+    fraction = true
+    fontawesome = true
+    linkToMarkdown = true
+    rssFullText = false
+
+    # 目录
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+
+    # 代码块
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+      [params.page.code.render]
+        goat = true
+        mermaid = true
+
+    # 数学公式（KaTeX，默认关闭）
+    [params.page.math]
+      enable = false
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      copyTex = true
+      mhchem = true
+
+    # 地图（需要 Mapbox 账号，默认留空）
+    [params.page.mapbox]
+      accessToken = ""
+      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      navigation = true
+      geolocate = true
+      scale = true
+      fullscreen = true
+
+    # 文章分享按钮
+    [params.page.share]
+      enable = true
+      X = true
+      Facebook = true
+      Linkedin = true
+      Weibo = true
+      Telegram = true
+
+    # 评论系统（默认全部关闭；以后想开启留言时再改）
+    [params.page.comment]
+      enable = false
+      [params.page.comment.disqus]
+        enable = false
+        shortname = ""
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = "mp"
+        meta = ""
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = ""
+        emoji = ""
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = ""
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      [params.page.comment.commento]
+        enable = false
+      [params.page.comment.utterances]
+        enable = false
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = "Announcements"
+        categoryId = ""
+        lang = ""
+        mapping = "pathname"
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom"
+        lazyLoading = false
+        lightTheme = "light"
+        darkTheme = "dark"
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+        lang = ""
+        emoji = []
+
+    # 额外引入的 CSS / JS（一般留空）
+    [params.page.library]
+      [params.page.library.css]
+      [params.page.library.js]
+
+    # 文章 SEO
+    [params.page.seo]
+      images = []
+      [params.page.seo.publisher]
+        name = "我的博客"
+        logoUrl = ""
+
+  # 打字机动画参数
+  [params.typeit]
+    speed = 100
+    cursorSpeed = 1000
+    cursorChar = "|"
+    duration = -1
+
+  # 搜索引擎平台验证码（按需填写）
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+
+  # 网站 SEO 配图（可留空）
+  [params.seo]
+    image = ""
+    thumbnailUrl = ""
+
+  # 网站统计（按需填写）
+  [params.analytics]
+    [params.analytics.google]
+      id = ""
+      respectDoNotTrack = false
+    [params.analytics.fathom]
+      id = ""
+      server = ""
+    [params.analytics.plausible]
+      dataDomain = ""
+    [params.analytics.yandexMetrica]
+      id = ""
+    [params.analytics.goatCounter]
+      code = ""
+
+  # Cookie 许可横幅（一般不需要）
+  [params.cookieconsent]
+    enable = false
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+
+  # 第三方库 CDN（留空 = 使用本地自带文件，国内访问更稳）
+  [params.cdn]
+    data = ""
+
+  # 老浏览器兼容补丁（不需要）
+  [params.compatibility]
+    polyfill = false
+    objectFit = false
+
+# ============================================================
+# Hugo 解析设置
+# ============================================================
+[markup]
+  # 语法高亮
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+  # Markdown 解析扩展
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # 允许在文章中直接使用 HTML 标签
+      unsafe = true
+  # 文章目录
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# 站点地图
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# 文章链接格式（:filename = 以文件名作为网址）
+[permalinks]
+  posts = ":filename"
+
+# 隐私（保持默认）
+[privacy]
+  [privacy.googleAnalytics]
+  [privacy.twitter]
+  [privacy.youtube]
+
+# 附加输出格式（.md 原文、搜索索引 JSON）
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]

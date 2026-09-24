@@ -1,0 +1,15 @@
+# ===== Hugo 构建产物（自动生成，无需提交）=====
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# ===== 系统 / 编辑器杂项 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== opencode 本地工作目录 =====
+.opencode/
+
+# ===== Playwright MCP 本地工作目录 =====
+.playwright-mcp/
